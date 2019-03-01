@@ -10,6 +10,8 @@ Extracting each bit of each pixel of an image, creating 8 images (assuming 8-bit
 
 ![](Bit&#32;Plane&#32;Slicing/montage.png)
 
-also check what happens if we add this slices together. from the [Steganography](https://github.com/mhsattarian/steganography) repository:
+also check what happens if we choose n high-order bits of an image:
+
+> from the [Steganography](https://github.com/mhsattarian/steganography) repository:
 
 ![](https://raw.githubusercontent.com/mhsattarian/steganography/master/Images/extracted_images/montage.png)
