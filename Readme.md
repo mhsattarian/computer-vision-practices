@@ -1,4 +1,4 @@
-# Computer Vision Practives
+# Computer Vision Practices
 
 Simple projects and implementations for practicing computer vision. mostly using `python` with `opencv` package.
 
