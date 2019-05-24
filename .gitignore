@@ -1,0 +1,4 @@
+test/
+*.zip
+__pycache__/
+/.vscode

@@ -26,4 +26,4 @@ class Histogram_normalizer:
     return self.normalizedHist
 
 
-a = Histogram_normalizer('gama_0.5.jpg').get()
+# a = Histogram_normalizer('gama_0.5.jpg').get()

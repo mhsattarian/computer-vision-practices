@@ -11,18 +11,26 @@ class Histogram_equalizer:
 
     self.normalizedHist = Histogram_normalizer(image).get()
     # Could also use this:
-    # image_histogram, bins = np.histogram(image.flatten(), 255, [0,255], density=True)
+    # self.normalizedHist, bins = np.histogram(image.flatten(), 255, [0,255], density=True)
 
     cdf = self.normalizedHist.cumsum() # cumulative distribution function
-    print(self.normalizedHist)
-    print(cdf)
-  
+    cdf = 255 * cdf
+
+    self.equalizedHist = cdf
+    bins = [i for i in range(0, 256)]
+    # use linear interpolation of cdf to find new pixel values
+    self.equalizedImage = np.interp(image.flatten(), bins[:-1], cdf).reshape(image.shape)
+    
   def get(self):
-    pass
+    return self.equalizedImage, self.equalizedHist
 
 
+# a, b = Histogram_equalizer('gama_0.5.jpg').get()
+# print(a)
+# print('\n')
+# print(b)
+# cv2.imwrite("test.png", a)
 
-
-
-Histogram_equalizer('gama_0.5.jpg')
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
